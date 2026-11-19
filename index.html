@@ -1,816 +1,496 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Diksha | Computer Engineering Student</title>
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Icons -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
-<!-- CSS -->
-<link href="style.css" rel="stylesheet"/>
-<link href="source.css" rel="stylesheet"/>
-<style>
-.achievements-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 25px;
-    margin-top: 35px;
-}
-.info-card {
-    padding: 28px;
-    border-radius: 15px;
-    text-align: center;
-}
-.info-card i {
-    font-size: 35px;
-    margin-bottom: 15px;
-}
-.info-card h3 {
-    margin-bottom: 12px;
-}
-.info-card p {
-    line-height: 1.7;
-}
-.info-card .small-btn {
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-}
-.nss-section .about-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.nss-section .about-image .profile-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style><style>
-/* ================= ACHIEVEMENTS ================= */
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Diksha Waghmode - Computer Engineering Student and Frontend Developer">
+  <title>Diksha Waghmode | Portfolio</title>
 
-.achievements-section {
-    position: relative;
-    overflow: hidden;
-}
-
-.achievements-section::before {
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    top: 80px;
-    left: -140px;
-    background: rgba(99, 102, 241, 0.08);
-    pointer-events: none;
-}
-
-.achievement-grid {
-    max-width: 1100px;
-    margin: 45px auto 0;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 24px;
-    position: relative;
-    z-index: 1;
-}
-
-.achievement-card {
-    position: relative;
-    display: flex;
-    gap: 20px;
-    padding: 28px;
-    border: 1px solid rgba(120, 120, 120, 0.15);
-    border-radius: 20px;
-    background: rgba(255, 255, 255, 0.75);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-}
-
-.achievement-card::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 90px;
-    right: -35px;
-    top: -35px;
-    border-radius: 50%;
-    background: rgba(99, 102, 241, 0.08);
-}
-
-.achievement-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
-}
-
-.achievement-icon {
-    min-width: 58px;
-    height: 58px;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(99, 102, 241, 0.1);
-    font-size: 24px;
-}
-
-.achievement-content {
-    flex: 1;
-    position: relative;
-    z-index: 2;
-}
-
-.achievement-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    margin-bottom: 7px;
-    opacity: 0.75;
-}
-
-.achievement-card h3 {
-    margin: 0 0 9px;
-    font-size: 21px;
-}
-
-.achievement-card h4 {
-    margin: -3px 0 10px;
-    font-size: 14px;
-    font-weight: 600;
-}
-
-.achievement-card p {
-    margin: 0;
-    line-height: 1.7;
-    font-size: 14px;
-    opacity: 0.82;
-}
-
-.achievement-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 16px;
-}
-
-.achievement-pills span {
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 11px;
-    border: 1px solid rgba(99, 102, 241, 0.2);
-}
-
-.achievement-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    padding: 9px 14px;
-    border-radius: 9px;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.nss-achievement {
-    grid-column: 1 / -1;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(255, 255, 255, 0.85));
-}
-
-.nss-highlights {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.nss-highlights div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 11px 12px;
-    border-radius: 10px;
-    border: 1px solid rgba(120, 120, 120, 0.14);
-    font-size: 11px;
-    font-weight: 600;
-}
-
-.nss-highlights i {
-    font-size: 14px;
-}
-
-@media (max-width: 800px) {
-    .achievement-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nss-achievement {
-        grid-column: auto;
-    }
-
-    .nss-highlights {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 520px) {
-    .achievement-card {
-        flex-direction: column;
-        padding: 22px;
-    }
-
-    .achievement-icon {
-        width: 58px;
-    }
-
-    .nss-highlights {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-    <style>
-        /* ================= ACHIEVEMENTS ================= */
-
-        .achievement-grid {
-            max-width: 1100px;
-            margin: 45px auto 0;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .achievement-card {
-            display: flex;
-            gap: 20px;
-            padding: 28px;
-            border-radius: 20px;
-            border: 1px solid rgba(120, 120, 120, 0.15);
-            background: rgba(255, 255, 255, 0.85);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
-            transition: 0.3s ease;
-        }
-
-        .achievement-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.13);
-        }
-
-        .achievement-icon {
-            min-width: 58px;
-            height: 58px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgba(99, 102, 241, 0.1);
-            font-size: 24px;
-        }
-
-        .achievement-content {
-            flex: 1;
-        }
-
-        .achievement-tag {
-            display: inline-block;
-            margin-bottom: 7px;
-            font-size: 11px;
-            font-weight: 600;
-            letter-spacing: 0.7px;
-            text-transform: uppercase;
-            opacity: 0.7;
-        }
-
-        .achievement-card h3 {
-            margin: 0 0 10px;
-            font-size: 21px;
-        }
-
-        .achievement-card h4 {
-            margin: -3px 0 12px;
-            font-size: 14px;
-        }
-
-        .achievement-card p {
-            margin: 0 0 10px;
-            line-height: 1.7;
-            font-size: 14px;
-        }
-
-        .achievement-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-top: 10px;
-            padding: 10px 17px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            transition: 0.3s ease;
-        }
-
-        .achievement-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .nss-achievement {
-            grid-column: 1 / -1;
-            align-items: flex-start;
-        }
-
-        .nss-logo-box {
-            min-width: 90px;
-            width: 90px;
-            height: 90px;
-            border-radius: 18px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #ffffff;
-            border: 1px solid rgba(120, 120, 120, 0.15);
-        }
-
-        .nss-logo-box img {
-            width: 75px;
-            height: 75px;
-            object-fit: contain;
-        }
-
-        .nss-highlights {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 10px;
-            margin-top: 20px;
-        }
-
-        .nss-highlights div {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 11px 12px;
-            border-radius: 10px;
-            border: 1px solid rgba(120, 120, 120, 0.14);
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        .nss-highlights i {
-            font-size: 14px;
-        }
-
-        @media (max-width: 800px) {
-            .achievement-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .nss-achievement {
-                grid-column: auto;
-            }
-
-            .nss-highlights {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 520px) {
-            .achievement-card {
-                flex-direction: column;
-                padding: 22px;
-            }
-
-            .nss-highlights {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="source.css">
 </head>
-<body>
-<!-- ================= NAVBAR ================= -->
-<header>
-<nav class="navbar">
-<div class="logo">
-                Diksha<span>.</span>
-</div>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="#achievements">Achievements</a></li><li><a href="#contact">Contact</a></li>
-</ul>
-<div class="menu-icon">
-<i class="fa-solid fa-bars"></i>
-</div>
-</nav>
-</header>
-<!-- ================= HOME ================= -->
-<section class="hero" id="home">
-<div class="hero-content">
-<p class="hello">Hello, I'm</p>
-<h1>Diksha</h1>
-<h2>Computer Engineering Student</h2>
-<p>
-                I am passionate about Web Development, Programming,
-                Database Management and exploring new technologies.
-            </p>
-<div class="hero-buttons">
-<a class="btn" href="#projects">
-                    View Projects
-                </a>
-<a class="btn btn-outline" href="#contact">
-                    Contact Me
-                </a>
-</div>
-<div class="social-icons">
-<a href="#" target="_blank">
-<i class="fa-brands fa-github"></i>
-</a>
-<a href="#" target="_blank">
-<i class="fa-brands fa-linkedin"></i>
-</a>
-<a href="mailto:yourmail@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-</a>
-</div>
-</div>
-<div class="hero-image">
-<div class="profile-circle">
-<img alt="Diksha" src="image.png"/>
-</div>
-</div>
-</section>
-<!-- ================= ABOUT ================= -->
-<section class="section" id="about">
-<div class="section-title">
-<p>Get To Know Me</p>
-<h2>About Me</h2>
-</div>
-<div class="about-container">
-<div class="about-image">
-<img alt="Diksha" src="image.png"/>
-</div>
-<div class="about-content">
-<h3>I'm a Computer Engineering Student</h3>
-<p>
-                    Hello! I'm Diksha, a third-year Computer Engineering
-                    student at D. Y. Patil Institute of Technology,
-                    Pimpri, Pune.
-                </p>
-<p>
-                    I enjoy learning new technologies and developing
-                    creative projects using programming and web
-                    development.
-                </p>
-<p>
-                    Currently, I am improving my skills in Java,
-                    JavaScript, DSA, Full Stack Development and
-                    Generative AI.
-                </p>
-<div class="about-info">
-<div>
-<strong>Education:</strong>
-<span>B.E. Computer Engineering</span>
-</div>
-<div>
-<strong>Location:</strong>
-<span>Pune, Maharashtra</span>
-</div>
-<div>
-<strong>Interest:</strong>
-<span>Web Development &amp; Technology</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ================= SKILLS ================= -->
-<section class="section skills-section" id="skills">
-<div class="section-title">
-<p>What I Know</p>
-<h2>My Skills</h2>
-</div>
-<div class="skills-container">
-<div class="skill-card">
-<i class="fa-solid fa-code"></i>
-<h3>Programming</h3>
-<p>Java</p>
-<p>JavaScript</p>
-</div>
-<div class="skill-card">
-<i class="fa-solid fa-laptop-code"></i>
-<h3>Web Development</h3>
-<p>HTML</p>
-<p>CSS</p>
-<p>JavaScript</p>
-<p>Bootstrap</p>
-</div>
-<div class="skill-card">
-<i class="fa-solid fa-database"></i>
-<h3>Database</h3>
-<p>MySQL</p>
-<p>DBMS</p>
-</div>
-<div class="skill-card">
-<i class="fa-solid fa-screwdriver-wrench"></i>
-<h3>Tools</h3>
-<p>VS Code</p>
-<p>Git</p>
-<p>GitHub</p>
-</div>
-</div>
-</section>
-<!-- ================= PROJECTS ================= -->
-<section class="section" id="projects">
-<div class="section-title">
-<p>My Work</p>
-<h2>Projects</h2>
-</div>
-<div class="projects-container">
-<!-- Project 1 -->
-<div class="project-card">
-<div class="project-image">
-<i class="fa-brands fa-spotify"></i>
-</div>
-<div class="project-content">
-<h3>Spotify UI Clone</h3>
-<p>
-                        A responsive music streaming interface
-                        inspired by Spotify.
-                    </p>
-<div class="tech">
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-</div>
-<div class="project-buttons">
-<a class="small-btn" href="#">GitHub</a>
-<a class="small-btn" href="#">Live Demo</a>
-</div>
-</div>
-</div>
-<!-- Project 2 -->
-<div class="project-card">
-<div class="project-image">
-<i class="fa-solid fa-gamepad"></i>
-</div>
-<div class="project-content">
-<h3>Tic Tac Toe</h3>
-<p>
-                        An interactive two-player Tic Tac Toe
-                        game developed using JavaScript.
-                    </p>
-<div class="tech">
-<span>HTML</span>
-<span>CSS</span>
-<span>JavaScript</span>
-</div>
-<div class="project-buttons">
-<a class="small-btn" href="#">GitHub</a>
-<a class="small-btn" href="#">Live Demo</a>
-</div>
-</div>
-</div>
-<!-- Project 3 -->
-<div class="project-card">
-<div class="project-image">
-<i class="fa-solid fa-database"></i>
-</div>
-<div class="project-content">
-<h3>Database Web Application</h3>
-<p>
-                        A web application demonstrating database
-                        integration and CRUD operations.
-                    </p>
-<div class="tech">
-<span>HTML</span>
-<span>JavaScript</span>
-<span>MySQL</span>
-</div>
-<div class="project-buttons">
-<a class="small-btn" href="#">GitHub</a>
-<a class="small-btn" href="#">Live Demo</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ================= EDUCATION ================= -->
-<section class="section education-section" id="education">
-<div class="section-title">
-<p>My Academic Journey</p>
-<h2>Education</h2>
-</div>
-<div class="education-card">
-<div class="education-icon">
-<i class="fa-solid fa-graduation-cap"></i>
-</div>
-<div>
-<h3>Bachelor of Engineering</h3>
-<h4>Computer Engineering</h4>
-<p>
-                    D. Y. Patil Institute of Technology,
-                    Pimpri, Pune
-                </p>
-<span>2024 – 2028</span>
-</div>
-</div>
-<div class="education-card">
-<div class="education-icon">
-<i class="fa-solid fa-school"></i>
-</div>
-<div>
-<h3>Higher Secondary Education</h3>
-<p>HSC</p>
-<span>73.67%</span>
-</div>
-</div>
-<div class="education-card">
-<div class="education-icon">
-<i class="fa-solid fa-school"></i>
-</div>
-<div>
-<h3>Secondary Education</h3>
-<p>SSC</p>
-<span>92.40%</span>
-</div>
-</div>
-</section>
-<!-- ================= CERTIFICATIONS ================= -->
-<section class="section achievements-section" id="achievements">
-<div class="section-title">
-<p>Beyond Academics</p>
-<h2>Achievements</h2>
-</div>
-<div class="achievement-grid">
-<div class="achievement-card featured-achievement">
-<div class="achievement-icon">
-<i class="fa-solid fa-code"></i>
-</div>
-<div class="achievement-content">
-<span class="achievement-tag">Problem Solving</span>
-<h3>DSA &amp; Problem Solving</h3>
-<p>
-                Building strong problem-solving skills through regular
-                Data Structures and Algorithms practice using Java.
-            </p>
-<div class="achievement-pills">
-<span>Java</span>
-<span>DSA</span>
-<span>Logic Building</span>
-</div>
-</div>
-</div>
-<div class="achievement-card">
-<div class="achievement-icon">
-<i class="fa-solid fa-robot"></i>
-</div>
-<div class="achievement-content">
-<span class="achievement-tag">Technology</span>
-<h3>AI Tools</h3>
-<p>
-                Exploring modern AI tools to improve learning,
-                productivity, research and project development.
-            </p>
-</div>
-</div>
-<div class="achievement-card">
-<div class="achievement-icon">
-<i class="fa-solid fa-comments"></i>
-</div>
-<div class="achievement-content">
-<span class="achievement-tag">AI Assistant</span>
-<h3>Claude</h3>
-<p>
-                Using Claude for idea generation, coding support,
-                analysis and practical project workflows.
-            </p>
-</div>
-</div>
-<div class="achievement-card">
-<div class="achievement-icon">
-<i class="fa-solid fa-brain"></i>
-</div>
-<div class="achievement-content">
-<span class="achievement-tag">AI Skills</span>
-<h3>AI Fluency</h3>
-<p>
-                Developing practical AI fluency by learning how to
-                use AI tools efficiently and responsibly.
-            </p>
-</div>
-</div>
-<div class="achievement-card">
-<div class="achievement-icon">
-<i class="fa-solid fa-award"></i>
-</div>
-<div class="achievement-content">
-<span class="achievement-tag">Learning</span>
-<h3>Learning Achievements</h3>
-<p>
-                Continuously completing courses, certificates and
-                technical learning activities to strengthen my skills.
-            </p>
-<a class="achievement-btn" href="#">
-<i class="fa-solid fa-arrow-up-right-from-square"></i>
-                View Certificates
-            </a>
-</div>
-</div>
-<div class="achievement-card nss-achievement">
-<div class="achievement-icon">
-<i class="fa-solid fa-people-group"></i>
-</div>
-<div class="achievement-content">
-<span class="achievement-tag">Leadership &amp; Social Work</span>
-<h3>NSS Club</h3>
-<h4>Head of Content Team</h4>
-<p>
-                Actively involved in social work and community-oriented
-                activities through NSS. As Head of the Content Team,
-                I plan, create and manage content for events,
-                awareness campaigns and social initiatives.
-            </p>
-<div class="nss-highlights">
-<div>
-<i class="nss.png"></i>
-<span>Efficient Teamwork</span>
-</div>
-<div>
-<i class="fa-solid fa-bullhorn"></i>
-<span>Content &amp; Awareness</span>
-</div>
-<div>
-<i class="fa-solid fa-hand-holding-heart"></i>
-<span>Social Work</span>
-</div>
-<div>
-<i class="fa-solid fa-user-tie"></i>
-<span>Leadership</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- ================= CONTACT ================= -->
 
-<section class="section contact-section" id="contact">
-<div class="section-title">
-<p>Let's Connect</p>
-<h2>Contact Me</h2>
-</div>
-<div class="contact-container">
-<div class="contact-info">
-<h3>Let's work together!</h3>
-<p>
-                    I'm always interested in learning,
-                    building projects and exploring new
-                    opportunities.
-                </p>
-<div class="contact-item">
-<i class="fa-solid fa-envelope"></i>
-<span>diksha062302@gmail.com</span>
-</div>
-<div class="contact-item">
-<i class="fa-brands fa-linkedin"></i>
-<span>LinkedIn Profile<a href="https://www.linkedin.com/in/diksha-waghmode-3bb740329?"></a></span>
-</div>
-<div class="contact-item">
-<i class="fa-brands fa-github"></i>
-<span>GitHub Profile</span>
-<a href="https://diksha062302-spec.github."></a>
-</div>
-</div>
-<form class="contact-form">
-<input placeholder="Your Name" required="" type="text"/>
-<input placeholder="Your Email" required="" type="email"/>
-<input placeholder="Subject" required="" type="text"/>
-<textarea placeholder="Your Message" required="" rows="6"></textarea>
-<button class="btn" type="submit">
-                    Send Message
-                </button>
-</form>
-</div>
-</section>
-<!-- ================= FOOTER ================= -->
-<footer>
-<p>
-            © 2026 Diksha. All Rights Reserved.
+<body>
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="#home" class="logo">Diksha<span>.</span></a>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme">
+        <i class="fa-regular fa-moon"></i>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero container" id="home">
+
+      <div class="hero-copy">
+        <p class="eyebrow">COMPUTER ENGINEERING · FRONTEND DEVELOPMENT</p>
+
+        <h1>Curiosity into code.<br><em>Ideas into impact.</em></h1>
+
+        <p class="hero-intro">
+          Hello, I'm <strong>Diksha Waghmode</strong>, a Computer Engineering
+          student at Dr. D. Y. Patil Institute of Technology, Pimpri.
+          I build practical web projects, explore technology and enjoy solving problems.
         </p>
-</footer>
-<!-- JavaScript -->
-<script src="app.js"></script>
+
+        <div class="hero-actions">
+          <a href="#projects" class="button button-primary">
+            Explore my projects <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#contact" class="button button-outline">Let's connect</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://github.com/diksha062302-spec" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/diksha-waghmode-3bb740329" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="mailto:diksha062302@gmail.com" aria-label="Email">
+            <i class="fa-regular fa-envelope"></i>
+          </a>
+        </div>
+
+        <div class="hero-facts">
+          <div>
+            <strong data-count="8.53" data-decimals="2">0</strong>
+            <span>Current CGPA</span>
+          </div>
+          <div>
+            <strong data-count="4" data-decimals="0">0</strong>
+            <span>Featured projects</span>
+          </div>
+          <div>
+            <strong data-count="2" data-decimals="0">0</strong>
+            <span>Certifications</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="image.png" alt="Diksha Waghmode"
+               onerror="this.style.display='none';this.nextElementSibling.hidden=false;">
+          <div class="portrait-fallback" hidden>DW</div>
+        </div>
+
+        <div class="portrait-note">
+          <span>PUNE, INDIA</span>
+          <span>Curious mind · Constant learner</span>
+        </div>
+
+        <div class="hero-stamp">
+          <i class="fa-solid fa-code"></i>
+          <span>Learning<br>& building</span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#about">SCROLL TO EXPLORE ↓</a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section container" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">A LITTLE INTRODUCTION</p>
+        <h2>About <em>me</em></h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-mark reveal">
+          <span>“</span>
+          <p>Technology becomes meaningful when we use it to solve real problems and help people.</p>
+          <small>MY APPROACH</small>
+        </div>
+
+        <div class="about-copy reveal">
+          <h3>A developer who believes in learning by building.</h3>
+
+          <p>
+            I'm pursuing a B.E. in Computer Engineering at Dr. D. Y. Patil
+            Institute of Technology, Pimpri. My technical interests include
+            frontend development, React.js, programming, databases and problem-solving.
+          </p>
+
+          <p>
+            Alongside academics, I serve as the Head of the Content Team in
+            the National Service Scheme (NSS). My internship at Pledge Smile
+            Foundation and participation in community initiatives have helped
+            me grow in communication, teamwork and leadership.
+          </p>
+
+          <div class="detail-grid">
+            <div><span>EDUCATION</span><strong>B.E. Computer Engineering</strong></div>
+            <div><span>LOCATION</span><strong>Pune, Maharashtra</strong></div>
+            <div><span>TECHNICAL FOCUS</span><strong>Frontend & Software Development</strong></div>
+            <div><span>VALUES</span><strong>Learn · Build · Contribute</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section section-muted" id="skills">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">TOOLS OF THE TRADE</p>
+          <h2>Technical <em>skills</em></h2>
+          <p class="heading-note">Technologies and foundations I use while learning and building.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <h3>Programming</h3>
+            <p>Java · C++ · JavaScript</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-laptop-code"></i>
+            <h3>Frontend Development</h3>
+            <p>HTML · CSS · React.js · Responsive Design</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-database"></i>
+            <h3>Database & Cloud</h3>
+            <p>SQL · SQL Server · Azure SQL Database</p>
+          </article>
+
+          <article class="skill-card reveal">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Core Skills & Tools</h3>
+            <p>DSA · OOP · Git · GitHub · Problem-Solving</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2>Projects with <em>purpose</em></h2>
+        <p class="heading-note">Practical projects reflecting my learning and development.</p>
+      </div>
+
+      <div class="project-filters">
+        <button class="filter-button active" data-filter="all">All projects</button>
+        <button class="filter-button" data-filter="frontend">Frontend</button>
+        <button class="filter-button" data-filter="react">React</button>
+        <button class="filter-button" data-filter="community">Community</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <article class="project-card reveal" data-category="frontend">
+          <div class="project-art art-portfolio">
+            <i class="fa-regular fa-id-card"></i>
+            <span>01</span>
+          </div>
+          <div class="project-body">
+            <p class="project-type">PERSONAL WEBSITE</p>
+            <h3>Portfolio Website</h3>
+            <p>Designed and developed a responsive personal website to present my profile, skills and projects.</p>
+            <div class="tag-list">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/diksha062302-spec" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="react">
+          <div class="project-art art-todo">
+            <i class="fa-solid fa-list-check"></i>
+            <span>02</span>
+          </div>
+          <div class="project-body">
+            <p class="project-type">TASK MANAGEMENT</p>
+            <h3>TaskFlow To-Do App</h3>
+            <p>Built a task manager with add, delete, search, priorities, due dates and progress tracking.</p>
+            <div class="tag-list">
+              <span>React.js</span><span>useState</span><span>CRUD</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/diksha062302-spec/What_To_Do" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="community">
+          <div class="project-art art-nss">
+            <i class="fa-solid fa-hands-holding-circle"></i>
+            <span>03</span>
+          </div>
+          <div class="project-body">
+            <p class="project-type">COMMUNITY PLATFORM</p>
+            <h3>NSS Website</h3>
+            <p>Developed a responsive website to showcase NSS activities, events and volunteer opportunities.</p>
+            <div class="tag-list">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/diksha062302-spec" target="_blank">View on GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="frontend">
+          <div class="project-art art-spotify">
+            <i class="fa-brands fa-spotify"></i>
+            <span>04</span>
+          </div>
+          <div class="project-body">
+            <p class="project-type">MUSIC PLAYER INTERFACE</p>
+            <h3>Spotify Clone</h3>
+            <p>Created a responsive music-streaming interface inspired by Spotify with interactive UI elements.</p>
+            <div class="tag-list">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/diksha062302-spec" target="_blank">Explore GitHub ↗</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-muted" id="education">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">THE LEARNING JOURNEY</p>
+          <h2>Education</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024 – 2028</span>
+              <h3>Bachelor of Engineering</h3>
+              <h4>Computer Engineering</h4>
+              <p>Dr. D. Y. Patil Institute of Technology, Pimpri · CGPA: 8.53</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-icon"><i class="fa-solid fa-school"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2024</span>
+              <h3>Higher Secondary Certificate</h3>
+              <p>JBVP-Lakhewadi, Pune · 73.67%</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <div class="timeline-icon"><i class="fa-solid fa-book-open"></i></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2022</span>
+              <h3>Secondary School Certificate</h3>
+              <p>Shree Kateshwar Vidyalaya, Kati, Pune · 92.40%</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section container" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WORK, LEADERSHIP & CONTRIBUTION</p>
+        <h2>Experience & <em>leadership</em></h2>
+      </div>
+
+      <div class="experience-grid">
+        <article class="experience-card reveal">
+          <i class="fa-solid fa-heart"></i>
+          <div>
+            <p class="project-type">INTERNSHIP</p>
+            <h3>Community Service Intern</h3>
+            <h4>Pledge Smile Foundation</h4>
+            <p>Contributed to social welfare initiatives, community engagement and social-awareness activities.</p>
+          </div>
+        </article>
+
+        <article class="experience-card reveal">
+          <i class="fa-solid fa-people-group"></i>
+          <div>
+            <p class="project-type">POSITION OF RESPONSIBILITY</p>
+            <h3>NSS Club — Content Team Head</h3>
+            <p>Lead content creation and coordinate captions, write-ups and event updates for NSS activities.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="activity-panel reveal">
+        <h3>Learning beyond the classroom</h3>
+        <div class="activity-list">
+          <article>
+            <i class="fa-solid fa-car-side"></i>
+            <div>
+              <h4>Bluetooth-Controlled Car — Mini Project</h4>
+              <p>Worked in a team of four to develop a Bluetooth-operated robotic car using Arduino.</p>
+            </div>
+          </article>
+
+          <article>
+            <i class="fa-solid fa-hands-holding-child"></i>
+            <div>
+              <h4>NSS 7-Day Special Camp — Nesave Village</h4>
+              <p>Participated in a camp focused on rural development and community engagement.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section section-muted" id="certifications">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">CONTINUOUS LEARNING</p>
+          <h2>Certifications</h2>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <i class="fa-solid fa-code"></i>
+            <div>
+              <p class="project-type">APNA COLLEGE</p>
+              <h3>DSA with Java</h3>
+              <p>Covered data structures and algorithms, arrays, strings, searching, sorting and problem-solving.</p>
+            </div>
+          </article>
+
+          <article class="cert-card reveal">
+            <i class="fa-brands fa-microsoft"></i>
+            <div>
+              <p class="project-type">MICROSOFT</p>
+              <h3>Migrate SQL Server Workloads to Azure SQL Database</h3>
+              <p>Learned database migration concepts, Azure SQL services and cloud database management.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERESTS -->
+    <section class="section container" id="interests">
+      <div class="section-heading reveal">
+        <p class="eyebrow">WHAT KEEPS ME CURIOUS</p>
+        <h2>Interests & <em>hobbies</em></h2>
+      </div>
+
+      <div class="interest-list reveal">
+        <span><i class="fa-solid fa-laptop-code"></i> Web development</span>
+        <span><i class="fa-solid fa-lightbulb"></i> New technologies</span>
+        <span><i class="fa-solid fa-puzzle-piece"></i> Problem-solving</span>
+        <span><i class="fa-solid fa-pen-nib"></i> UI/UX & drawing</span>
+        <span><i class="fa-solid fa-hand-holding-heart"></i> Social work</span>
+        <span><i class="fa-solid fa-trophy"></i> Hackathons</span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-heading centered reveal">
+          <p class="eyebrow">HAVE A PROJECT OR AN OPPORTUNITY?</p>
+          <h2>Let's start a <em>conversation.</em></h2>
+          <p class="heading-note">I'm open to connecting, learning and exploring meaningful opportunities.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-details reveal">
+            <a href="mailto:diksha062302@gmail.com">
+              <i class="fa-regular fa-envelope"></i>
+              <span><small>EMAIL</small>diksha062302@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/diksha-waghmode-3bb740329" target="_blank">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span><small>LINKEDIN</small>Connect professionally</span>
+            </a>
+            <a href="https://github.com/diksha062302-spec" target="_blank">
+              <i class="fa-brands fa-github"></i>
+              <span><small>GITHUB</small>Explore my repositories</span>
+            </a>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-row">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name" required minlength="2">
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" placeholder="Subject" required>
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Write your message..." required minlength="10"></textarea>
+            </div>
+
+            <p id="form-status" class="form-status" aria-live="polite">
+              Your email application will open with your message ready.
+            </p>
+
+            <button class="button button-primary" type="submit">
+              Prepare email <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">Diksha<span>.</span></a>
+      <p>Designed with care · © <span id="year"></span> Diksha Waghmode</p>
+      <a href="#home" class="back-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="app.js"></script>
 </body>
 </html>
